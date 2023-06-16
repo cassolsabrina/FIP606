@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Importação de dados</title>
+<title>Criando mapas no R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,8 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Aula8.html" rel="next">
-<link href="./Aula2.html" rel="prev">
+<link href="./Aula7.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -238,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Importação de dados</h1>
+      <h1 class="quarto-secondary-nav-title">Criando mapas no R</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -263,12 +262,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Introdução</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Introdução</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Aula2.html" class="sidebar-item-text sidebar-link">Pacotes</a>
@@ -276,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aula3.html" class="sidebar-item-text sidebar-link active">Importação de dados</a>
+  <a href="./Aula3.html" class="sidebar-item-text sidebar-link">Importação de dados</a>
   </div>
 </li>
       </ul>
@@ -348,15 +347,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Mapas</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Mapas</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aula16.html" class="sidebar-item-text sidebar-link">Criando mapas no R</a>
+  <a href="./Aula16.html" class="sidebar-item-text sidebar-link active">Criando mapas no R</a>
   </div>
 </li>
       </ul>
@@ -371,7 +370,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Importação de dados</h1>
+<h1 class="title d-none d-lg-block">Criando mapas no R</h1>
 </div>
 
 
@@ -386,233 +385,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="importando-dados" class="level1">
-<h1>Importando dados</h1>
-<section id="from-packages" class="level2">
-<h2 class="anchored" data-anchor-id="from-packages">From packages</h2>
-<div class="cell" data-hash="Aula3_cache/html/unnamed-chunk-1_4f8f997d4485672e643518a619fba1e3">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   speed dist
-1      4    2
-2      4   10
-3      7    4
-4      7   22
-5      8   16
-6      9   10
-7     10   18
-8     10   26
-9     10   34
-10    11   17
-11    11   28
-12    12   14
-13    12   20
-14    12   24
-15    12   28
-16    13   26
-17    13   34
-18    13   34
-19    13   46
-20    14   26
-21    14   36
-22    14   60
-23    14   80
-24    15   20
-25    15   26
-26    15   54
-27    16   32
-28    16   40
-29    17   32
-30    17   40
-31    17   50
-32    18   42
-33    18   56
-34    18   76
-35    18   84
-36    19   36
-37    19   46
-38    19   68
-39    20   32
-40    20   48
-41    20   52
-42    20   56
-43    20   64
-44    22   66
-45    23   54
-46    24   70
-47    24   92
-48    24   93
-49    24  120
-50    25   85</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cars2 <span class="ot">&lt;-</span> cars</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>speed <span class="ot">&lt;-</span> cars2<span class="sc">$</span>speed</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>speed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  4  4  7  7  8  9 10 10 10 11 11 12 12 12 12 13 13 13 13 14 14 14 14 15 15
-[26] 15 16 16 17 17 17 18 18 18 18 19 19 19 20 20 20 20 20 22 23 24 24 24 24 25</code></pre>
+<p>Primeiro passo é instalar os pacotes</p>
+<div class="cell" data-hash="Aula16_cache/html/unnamed-chunk-1_0a20ec08d8a97e6f2ec5e56a5f9dd716">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(r4pde)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sbr <span class="ot">&lt;-</span> RustSoybean</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearthhires)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"ropensci/rnaturalearthhires"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>BRA <span class="ot">&lt;-</span> <span class="fu">ne_states</span>(<span class="at">country =</span> <span class="st">"Brazil"</span>, <span class="at">returnclass =</span> <span class="st">"sf"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>MG <span class="ot">&lt;-</span> BRA <span class="sc">|&gt;</span> <span class="fu">filter</span>(name_en <span class="sc">==</span> <span class="st">"Minas Gerais"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(BRA) <span class="sc">+</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">color =</span><span class="st">"black"</span>, <span class="at">fill=</span> <span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> MG, <span class="at">fill =</span><span class="st">"green"</span>, <span class="at">color =</span> <span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> sbr, <span class="fu">aes</span>(longitude, latitude), <span class="at">alpha =</span> <span class="fl">0.5</span>)<span class="sc">+</span> <span class="co">#o alpha é pra sobreposição de pontos por cor</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula16_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<div class="cell" data-hash="Aula3_cache/html/unnamed-chunk-2_c233a058600eae1bd810cc6dc496eb96">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(r4pde)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>RustSoybean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 34 × 7
-   epidemia latitude longitude local              planting   detection  severity
-      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;              &lt;date&gt;     &lt;date&gt;        &lt;dbl&gt;
- 1       23    -23.0     -50.1 Cambara            2003-11-25 2004-02-02     24  
- 2       24    -24.0     -52.4 Campo Mourao       2003-11-28 2004-02-02     21  
- 3       31    -15.5     -55.2 Campo Verde        2004-11-20 2005-01-25     78  
- 4        3    -13.3     -44.6 Correntina         2002-11-10 2003-01-03     85  
- 5       15    -13.3     -44.6 Correntina         2003-11-28 2004-01-31     25  
- 6       34    -25.4     -51.5 Guarapuava         2004-11-29 2005-03-14     32  
- 7        7    -29.2     -53.7 Julio Castilhos    2002-12-15 2003-04-10     40  
- 8       13    -12.1     -45.8 Luis Eduardo Maga… 2003-11-12 2004-02-15     39.2
- 9       33    -12.1     -45.8 Luis Eduardo Maga… 2004-11-19 2005-01-25     55  
-10        1    -23.3     -51.2 Londrina           2002-11-06 2003-02-03     45  
-# ℹ 24 more rows</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> RustSoybean</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 34 × 7
-   epidemia latitude longitude local              planting   detection  severity
-      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;              &lt;date&gt;     &lt;date&gt;        &lt;dbl&gt;
- 1       23    -23.0     -50.1 Cambara            2003-11-25 2004-02-02     24  
- 2       24    -24.0     -52.4 Campo Mourao       2003-11-28 2004-02-02     21  
- 3       31    -15.5     -55.2 Campo Verde        2004-11-20 2005-01-25     78  
- 4        3    -13.3     -44.6 Correntina         2002-11-10 2003-01-03     85  
- 5       15    -13.3     -44.6 Correntina         2003-11-28 2004-01-31     25  
- 6       34    -25.4     -51.5 Guarapuava         2004-11-29 2005-03-14     32  
- 7        7    -29.2     -53.7 Julio Castilhos    2002-12-15 2003-04-10     40  
- 8       13    -12.1     -45.8 Luis Eduardo Maga… 2003-11-12 2004-02-15     39.2
- 9       33    -12.1     -45.8 Luis Eduardo Maga… 2004-11-19 2005-01-25     55  
-10        1    -23.3     -51.2 Londrina           2002-11-06 2003-02-03     45  
-# ℹ 24 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="from-excel" class="level2">
-<h2 class="anchored" data-anchor-id="from-excel">From excel</h2>
-<p>O segundo argumento é o nome da aba do arquivo excel</p>
-<div class="cell" data-hash="Aula3_cache/html/unnamed-chunk-3_03d5b1a885ad890498ee4d96a7bc561f">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>magnesio <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"dados-diversos.xlsx"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>escala <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"dados-diversos.xlsx"</span>, <span class="st">"escala"</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>escala <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"dados-diversos.xlsx"</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="from-csv" class="level2">
-<h2 class="anchored" data-anchor-id="from-csv">From csv</h2>
-<p>Formato csv é formato de texto, separado por vírgula. Quando pede ajuda vai aparecer: read.table {utils} entre chaves é o nome do pacote Se não der tenta read_csv2, porque pode estar separado por outro caractere</p>
-<div class="cell" data-hash="Aula3_cache/html/unnamed-chunk-4_f8db95366c1bbb0d9ff94939713feab3">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>magnesio2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"dados-diversos.csv"</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>magnesio5 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"dados-diversos.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>#From txt</p>
-<div class="cell" data-hash="Aula3_cache/html/unnamed-chunk-5_0041f4d422c67b75db96775a34939480">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>magnesio6 <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"dados-diversos.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>magnesio6</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Irrigation rep day severity
-1      Furrow   1   0     0,01
-2      Furrow   2   0     0,01
-3      Furrow   3   0     0,01
-4      Furrow   1   7     0,04
-5      Furrow   2   7     0,04
-6      Furrow   3   7     0,04
-7      Furrow   1  14     0,10
-8      Furrow   2  14     0,10
-9      Furrow   3  14     0,11
-10     Furrow   1  21     0,11
-11     Furrow   2  21     0,10
-12     Furrow   3  21     0,10
-13     Furrow   1  28     0,15
-14     Furrow   2  28     0,17
-15     Furrow   3  28     0,15
-16     Furrow   1  35     0,18
-17     Furrow   2  35     0,19
-18     Furrow   3  35     0,19
-19     Furrow   1  42     0,34
-20     Furrow   2  42     0,38
-21     Furrow   3  42     0,34
-22     Furrow   1  49     0,38
-23     Furrow   2  49     0,39
-24     Furrow   3  49     0,38
-25     Furrow   1  56     0,40
-26     Furrow   2  56     0,41
-27     Furrow   3  56     0,43
-28     Furrow   1  63     0,46
-29     Furrow   2  63     0,46
-30     Furrow   3  63     0,43
-31       Drip   1   0     0,01
-32       Drip   2   0     0,01
-33       Drip   3   0     0,01
-34       Drip   1   7     0,03
-35       Drip   2   7     0,04
-36       Drip   3   7     0,04
-37       Drip   1  14     0,11
-38       Drip   2  14     0,11
-39       Drip   3  14     0,10
-40       Drip   1  21     0,13
-41       Drip   2  21     0,12
-42       Drip   3  21     0,10
-43       Drip   1  28     0,16
-44       Drip   2  28     0,15
-45       Drip   3  28     0,15
-46       Drip   1  35     0,18
-47       Drip   2  35     0,19
-48       Drip   3  35     0,17
-49       Drip   1  42     0,30
-50       Drip   2  42     0,33
-51       Drip   3  42     0,34
-52       Drip   1  49     0,33
-53       Drip   2  49     0,37
-54       Drip   3  49     0,37
-55       Drip   1  56     0,39
-56       Drip   2  56     0,46
-57       Drip   3  56     0,41
-58       Drip   1  63     0,43
-59       Drip   2  63     0,43
-60       Drip   3  63     0,43</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="from-google-sheet" class="level1">
-<h1>From google sheet</h1>
-<p>primeiro autoriza no doc que qualquer com o link pode visualizar para você carregar a segunda aba da planilha tem que pegar o link da segunda aba no doc</p>
-<div class="cell" data-hash="Aula3_cache/html/unnamed-chunk-6_5c91e600a11c4b559334504643da6a95">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gsheet)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>magnesio7 <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1aID5Dh6PlBVCKzU1j7k-WA6zuWQWE2NhtWEgdJtt5iA/edit?usp=sharing"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>survey <span class="ot">&lt;-</span> <span class="fu">gsheet2tbl</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1aID5Dh6PlBVCKzU1j7k-WA6zuWQWE2NhtWEgdJtt5iA/edit#gid=366054269"</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#ou csv de um link </span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>fusarium <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/emdelponte/epidemiology-R/main/data/fusarium_banana.csv"</span>)</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>fusarium</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 163 × 4
-     lon   lat marker  field
-   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;
- 1 -50.8 -20.5 plantas    11
- 2 -50.8 -20.5 plantas    11
- 3 -50.8 -20.5 plantas    11
- 4 -50.8 -20.5 plantas    11
- 5 -50.8 -20.5 plantas    11
- 6 -50.8 -20.5 plantas    11
- 7 -50.8 -20.5 plantas    11
- 8 -50.8 -20.5 plantas    11
- 9 -50.8 -20.5 plantas    11
-10 -50.8 -20.5 plantas    11
-# ℹ 153 more rows</code></pre>
+<div class="cell" data-hash="Aula16_cache/html/unnamed-chunk-2_efa4ba0f5d19fa0e4aa91287951d4fef">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sbr2 <span class="ot">&lt;-</span> sbr <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(planting, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"year"</span>, <span class="st">"month"</span>, <span class="st">"day"</span>), <span class="at">sep =</span> <span class="st">"-"</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>BRA <span class="ot">&lt;-</span> <span class="fu">ne_states</span>(<span class="at">country =</span> <span class="st">"Brazil"</span>, <span class="at">returnclass =</span> <span class="st">"sf"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>MG <span class="ot">&lt;-</span> BRA <span class="sc">|&gt;</span> <span class="fu">filter</span>(name_en <span class="sc">==</span> <span class="st">"Minas Gerais"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggsn)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggspatial)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(BRA) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location=</span><span class="st">"br"</span>)<span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(<span class="at">location =</span><span class="st">"bl"</span>)<span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">color =</span><span class="st">"black"</span>, <span class="at">fill=</span> <span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a> <span class="co"># geom_sf(data = MG, fill ="green", color = "black")+</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> sbr2, <span class="fu">aes</span>(longitude, latitude, <span class="at">color =</span> year, <span class="at">size =</span> severity), <span class="at">alpha =</span> <span class="fl">0.5</span>)<span class="sc">+</span> <span class="co">#o alpha é pra sobreposição de pontos por cor</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()<span class="sc">+</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_wrap(~year)+#pra separar um gráfico por ano, ou se tirar fica só as cores diferentes pra cada ano no mesmo mapa</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="sc">-</span><span class="dv">23</span>)<span class="sc">+</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">color =</span> <span class="st">"Plating Year"</span>)<span class="sc">+</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"right"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Aula16_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -750,14 +574,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Aula2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pacotes</span>
+      <a href="./Aula7.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Histograma</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Aula8.html" class="pagination-link">
-        <span class="nav-page-text">Teste T</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

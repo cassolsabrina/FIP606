@@ -144,10 +144,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-básico-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Básico R</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-introdução" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Introdução</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-básico-r">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-introdução">    
         <li>
     <a class="dropdown-item" href="./Aula2.html">
  <span class="dropdown-text">Pacotes</span></a>
@@ -159,13 +159,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-gráficos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Gráficos</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-visualização-de-dados" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Visualização de dados</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-gráficos">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-visualização-de-dados">    
         <li>
     <a class="dropdown-item" href="./Aula4.html">
  <span class="dropdown-text">Gráfico pontos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Aula6.html">
+ <span class="dropdown-text">Duas variáveis relacionadas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Aula7.html">
+ <span class="dropdown-text">Histograma</span></a>
   </li>  
     </ul>
   </li>
@@ -177,6 +185,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <li>
     <a class="dropdown-item" href="./Aula8.html">
  <span class="dropdown-text">Teste T</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Aula10.html">
+ <span class="dropdown-text">Anova 1 Fator</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Aula11.html">
+ <span class="dropdown-text">Anova 2 Fatores</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Aula12.html">
+ <span class="dropdown-text">Anova em DBC</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Aula13.html">
+ <span class="dropdown-text">Anova para fatores categóricos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Aula14.html">
+ <span class="dropdown-text">Regressão</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mapas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Mapas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mapas">    
+        <li>
+    <a class="dropdown-item" href="./Aula16.html">
+ <span class="dropdown-text">Criando mapas no R</span></a>
   </li>  
     </ul>
   </li>
@@ -209,6 +248,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./rstudio.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -218,7 +262,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Básico no R</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Introdução</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -238,30 +282,80 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Análise estatística</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Análise estatística</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Aula8.html" class="sidebar-item-text sidebar-link">Teste T</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aula10.html" class="sidebar-item-text sidebar-link">Anova 1 fator</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aula11.html" class="sidebar-item-text sidebar-link">Anova 2 fatores</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aula12.html" class="sidebar-item-text sidebar-link">Anova em DBC</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aula13.html" class="sidebar-item-text sidebar-link">Anova para fatores categóricos</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aula14.html" class="sidebar-item-text sidebar-link">Regressão</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Visualização de dados</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Visualização de dados</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Aula4.html" class="sidebar-item-text sidebar-link">Gráficos</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aula6.html" class="sidebar-item-text sidebar-link">Duas variáveis relacionadas</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aula7.html" class="sidebar-item-text sidebar-link">Histograma</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Mapas</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Aula16.html" class="sidebar-item-text sidebar-link">Criando mapas no R</a>
   </div>
 </li>
       </ul>
