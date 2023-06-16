@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Home - Análise de dados no R</title>
+<title></title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,8 +70,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Home</span>
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./home.png" alt="" class="navbar-logo">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -80,17 +80,17 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-instruções-básicas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Instruções Básicas</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-básico-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Básico R</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-instruções-básicas">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-básico-r">    
         <li>
     <a class="dropdown-item" href="./Aula2.html">
- <span class="dropdown-text">Carregando pacotes</span></a>
+ <span class="dropdown-text">Pacotes</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Aula3.html">
- <span class="dropdown-text">Importando dados</span></a>
+ <span class="dropdown-text">Importação de dados</span></a>
   </li>  
     </ul>
   </li>
@@ -101,21 +101,32 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-gráficos">    
         <li>
     <a class="dropdown-item" href="./Aula4.html">
- <span class="dropdown-text">Criando Gráficos com ggplot</span></a>
+ <span class="dropdown-text">Gráfico pontos</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-estatística" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Estatística</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análise-estatística" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Análise estatística</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-estatística">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análise-estatística">    
         <li>
     <a class="dropdown-item" href="./Aula8.html">
  <span class="dropdown-text">Teste T</span></a>
   </li>  
     </ul>
   </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+ <span class="menu-text">Autor do site</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cassolsabrina"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -130,38 +141,45 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Análise de dados no R</h1>
-</div>
 
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
 
 <div class="quarto-figure quarto-figure-left" style="float: left; padding-right: 30px">
 <figure class="figure">
-<p><img src="images/1401002162_A animation woman analyzing scientific plant patho_xl-beta-v2-2-2.png" class="img-fluid figure-img" alt="Analisando dados no R" width="184"></p>
+<p><img src="fip.png" class="img-fluid figure-img" alt="Analisando dados no R" width="194"></p>
 </figure>
 </div>
 <hr>
 <section id="bem-vindo" class="level1">
-<h1><strong>Bem-vindo!</strong></h1>
-<p>Este site foi criado na disciplina FIP - 606.</p>
-<p>As aulas estão disponíveis em tópicos no menu.</p>
+<h1>Bem-vindo!</h1>
+<p>Este site foi criado na disciplina FIP - 606 com Quarto.</p>
+<p>As aulas da disciplina estão disponibilizadas nos itens do menu.</p>
 <hr>
-<p><strong>Criado por:</strong> Sabrina Angela Cassol</p>
-<p><strong>Contato:</strong> sabrina.cassol@ufv.br</p>
+<section id="análise-e-visualização-de-dados-em-fitopatologia" class="level2">
+<h2 class="anchored" data-anchor-id="análise-e-visualização-de-dados-em-fitopatologia"><strong>Análise e visualização de dados em Fitopatologia</strong></h2>
+<div class="quarto-figure quarto-figure-left" style="float: left; padding-right: 30px">
+<figure class="figure">
+<p><img src="fito.jpg" class="img-fluid figure-img" width="225"></p>
+</figure>
+</div>
+<p>Esta disciplina FIP 606 é ofertada pelo curso de pós-graduação em Fitopatologia da Universidade Federal de Viçosa e aborda:</p>
+<p>Conceitos básicos de estatística. Metodologia Científica. Escolha de delineamentos e análise de variância de experimentos conduzidos em condições de laboratórios, casa de vegetação e campo, em diferentes áreas na Fitopatologia. Análise de regressão e correlação aplicada à Fitopatologia. Análise multivariada. Aplicações de programas de computador em análises estatísticas.</p>
+<p>Para saber mais sobre o curso de pós-graduação <a href="https://www.dfp.ufv.br/">clique aqui</a>.</p>
+<p>Disciplina ministrada por:</p>
+<div class="quarto-figure quarto-figure-left" style="float: left; padding-right: 30px">
+<figure class="figure">
+<p><img src="prof.jpg" class="img-fluid figure-img" width="113"></p>
+</figure>
+</div>
+</section>
+<section id="prof.-emerson-del-ponte" class="level2">
+<h2 class="anchored" data-anchor-id="prof.-emerson-del-ponte">Prof.&nbsp;Emerson Del Ponte</h2>
+<p>Dr.&nbsp;em Fitopatologia, UFPel/Cornell (sandwich) &nbsp;(2004)<br>
+M.Sc. em Agronomia, UFPel (1999)<br>
+Eng. Agrônomo, UFPel (1996)</p>
+<p><img src="git.png" class="img-fluid" width="22"> <a href="https://github.com/emdelponte">GitHub</a> <img src="gr.png" class="img-fluid" width="22"> <a href="https://www.instagram.com/emdelponte/">Instagram</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -299,6 +317,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Criado por: Sabrina Cassol</div>
+  </div>
+</footer>
 
 
 
