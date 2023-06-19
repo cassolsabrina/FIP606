@@ -150,6 +150,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-introdução">    
         <li>
+    <a class="dropdown-item" href="./Rstudio.html">
+ <span class="dropdown-text">RStudio</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./Aula2.html">
  <span class="dropdown-text">Pacotes</span></a>
   </li>  
@@ -166,23 +170,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <ul class="dropdown-menu" aria-labelledby="nav-menu-visualização-de-dados">    
         <li>
     <a class="dropdown-item" href="./Aula4.html">
- <span class="dropdown-text">Gráfico pontos</span></a>
+ <span class="dropdown-text">GGplot</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Aula6.html">
- <span class="dropdown-text">Duas variáveis relacionadas</span></a>
+ <span class="dropdown-text">Scatter plot</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Aula7.html">
  <span class="dropdown-text">Histograma</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./Box plot.html">
+ <span class="dropdown-text">Box plot</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análise-estatística" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Análise estatística</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análise-de-dados" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Análise de dados</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-análise-estatística">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análise-de-dados">    
         <li>
     <a class="dropdown-item" href="./Aula8.html">
  <span class="dropdown-text">Teste T</span></a>
@@ -201,11 +209,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>  
         <li>
     <a class="dropdown-item" href="./Aula13.html">
- <span class="dropdown-text">Anova para fatores categóricos</span></a>
+ <span class="dropdown-text">Regressão</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Aula14.html">
- <span class="dropdown-text">Regressão</span></a>
+ <span class="dropdown-text">Regressão não-linear</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./boxcox.html">
+ <span class="dropdown-text">Transformação box-Cox</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./aula17.html">
+ <span class="dropdown-text">EC50</span></a>
   </li>  
     </ul>
   </li>
@@ -271,6 +287,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Rstudio.html" class="sidebar-item-text sidebar-link">RStudio</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Aula2.html" class="sidebar-item-text sidebar-link">Pacotes</a>
   </div>
 </li>
@@ -283,7 +304,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Análise estatística</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Análise de dados</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -311,12 +332,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aula13.html" class="sidebar-item-text sidebar-link">Anova para fatores categóricos</a>
+  <a href="./Aula13.html" class="sidebar-item-text sidebar-link">Regressão</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aula14.html" class="sidebar-item-text sidebar-link">Regressão</a>
+  <a href="./Aula14.html" class="sidebar-item-text sidebar-link">Regressão não-linear</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./boxcox.html" class="sidebar-item-text sidebar-link">Transformação box-Cox</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula17.html" class="sidebar-item-text sidebar-link">EC50</a>
   </div>
 </li>
       </ul>
@@ -331,17 +362,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aula4.html" class="sidebar-item-text sidebar-link">Gráficos</a>
+  <a href="./Aula4.html" class="sidebar-item-text sidebar-link">GGplot</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Aula6.html" class="sidebar-item-text sidebar-link">Duas variáveis relacionadas</a>
+  <a href="./Aula6.html" class="sidebar-item-text sidebar-link">Scatter plot</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Aula7.html" class="sidebar-item-text sidebar-link">Histograma</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Box plot.html" class="sidebar-item-text sidebar-link">Box plot</a>
   </div>
 </li>
       </ul>
@@ -602,7 +638,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./Aula13.html" class="pagination-link">
-        <span class="nav-page-text">Anova para fatores categóricos</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Regressão</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
